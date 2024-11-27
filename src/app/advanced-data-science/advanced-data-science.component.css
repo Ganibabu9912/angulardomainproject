@@ -1,0 +1,112 @@
+/* Overall styling for the section */
+.advanced-data-science {
+    font-family: Arial, sans-serif;
+    color: #333; /* Default text color */
+    background-color: #f9f9f9; /* Background color */
+    padding: 20px;
+    max-width: 800px; /* Maximum width of the section */
+    margin: 0 auto; /* Center the section in the middle of the page */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    text-align: center; /* Center-align text within the section */
+}
+
+/* Header styling */
+.course-header h2 {
+    font-size: 24px; /* Font size for the main title */
+    color: #004658; /* Color for the main title */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.course-header p {
+    font-size: 16px; /* Font size for the subtitle */
+    color: #555; /* Color for the subtitle */
+    margin-bottom: 20px; /* Space below the subtitle */
+}
+
+/* Syllabus section styling */
+.course-syllabus h3,
+.course-videos h3,
+.course-assignments h3,
+.course-tests h3,
+.zoom-classes h3 {
+    font-size: 20px; /* Font size for section headings */
+    color: #004658; /* Color for section headings */
+    margin-bottom: 10px; /* Space below section headings */
+}
+
+/* List styling */
+.course-syllabus ul,
+.course-videos ul,
+.course-assignments ul,
+.course-tests ul,
+.zoom-classes ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* No padding for lists */
+}
+
+.course-syllabus li,
+.course-videos li,
+.course-assignments li,
+.course-tests li {
+    font-size: 16px; /* Font size for list items */
+    cursor: pointer; /* Change cursor on hover */
+    padding: 8px; /* Padding inside list items */
+    background: #fff; /* Background color for list items */
+    border: 1px solid #ddd; /* Border for list items */
+    margin: 10px 0; /* Space between list items */
+    border-radius: 5px; /* Rounded corners for list items */
+    transition: background 0.3s; /* Transition effect for hover */
+}
+
+/* Hover effect for list items */
+.course-syllabus li:hover,
+.course-videos li:hover,
+.course-assignments li:hover,
+.course-tests li:hover {
+    background-color: #e3f2fd; /* Hover background color */
+}
+
+/* Video button styling */
+.video-button {
+    display: inline-block; /* Display inline with padding */
+    padding: 8px 16px; /* Padding for video button */
+    font-size: 16px; /* Font size for video button */
+    color: #fff; /* Font color for video button */
+    background: #004658; /* Background color for video button */
+    text-decoration: none; /* Remove underline */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s; /* Transition for hover */
+}
+
+.video-button:hover {
+    background-color: #005e6e; /* Darker shade on hover */
+}
+
+/* Button styling */
+.take-test-button {
+    padding: 5px 10px; /* Padding for test buttons */
+    font-size: 14px; /* Font size for test buttons */
+    color: #fff; /* Font color for test buttons */
+    background: #004658; /* Background color for test buttons */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition for hover */
+}
+
+.take-test-button:hover {
+    background-color: #005e6e; /* Darker shade on hover */
+}
+
+/* Zoom class link styling */
+.zoom-classes a {
+    font-size: 16px; /* Font size for Zoom class links */
+    color: #004658; /* Font color for Zoom class links */
+    text-decoration: none; /* Remove underline */
+}
+
+.zoom-classes a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

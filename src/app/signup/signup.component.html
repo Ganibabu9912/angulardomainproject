@@ -1,0 +1,34 @@
+<div class="video-container">
+  <video autoplay muted loop id="background-video">
+    <source src="assets/banners/loginvedio.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<section class="signup-section">
+  <h2>Sign Up</h2>
+
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <label for="username">Username:</label>
+    <input formControlName="username" id="username" type="text" placeholder="Enter Username" />
+
+    <label for="email">Email:</label>
+    <input formControlName="email" id="email" type="email" placeholder="Enter Email" />
+
+    <label for="password">Password:</label>
+    <input formControlName="password" id="password" type="password" placeholder="Enter Password" />
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input formControlName="confirmPassword" id="confirmPassword" type="password" placeholder="Confirm Password" />
+
+
+    <button type="submit">Sign Up</button>
+  </form>
+
+ 
+</section>
+<div class="new-account-section">
+  <h3> Centurion university Learning Management System</h3>
+  <p>Already have an account? Log in to access your courses!</p>
+  <button class="create-account-btn" (click)="navigateToLogin()">Go to Login</button>
+</div>

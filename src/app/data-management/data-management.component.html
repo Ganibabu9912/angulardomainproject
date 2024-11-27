@@ -1,0 +1,92 @@
+<section class="data-management-course">
+    <!-- Course Header Section -->
+    <div class="course-header">
+      <h2>Data Management: Explore Data Analysis Techniques</h2>
+      <p>Master essential data management skills and explore advanced data analysis techniques for real-world applications.</p>
+    </div>
+  
+    <!-- Syllabus Section -->
+    <div class="course-syllabus">
+      <h3>Course Syllabus</h3>
+      <ul>
+        <li *ngFor="let syllabusItem of syllabus; let i = index" (click)="toggleSection(i)">
+          {{ syllabusItem.title }}
+          <span *ngIf="activeSection === i">▼</span>
+          <span *ngIf="activeSection !== i">▶</span>
+    
+          <!-- Show description based on active section -->
+          <div *ngIf="activeSection === i" class="slide-content">
+            <p>{{ syllabusItem.description }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Video Lectures Section -->
+    <div class="course-videos">
+      <h3>Video Lectures</h3>
+      <ul>
+        <li *ngFor="let video of videos; let i = index">
+          <a (click)="toggleVideo(i)" class="video-button">{{ video.title }}</a>
+          <div *ngIf="activeVideo === i" class="slide-content">
+            <p>{{ video.description }}</p>
+            <div class="button-container">
+              <button (click)="showClassDetails(i)" class="watch-button">Watch Now</button>
+              <button (click)="uploadClass(video.title)" class="upload-button">Upload Class</button>
+            </div>
+            <div *ngIf="activeClassDetails === i" class="class-details">
+              <h4>Subclasses:</h4>
+              <ul>
+                <li *ngFor="let subClass of video.subClasses">{{ subClass }}</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Assignments Section -->
+    <div class="course-assignments">
+      <h3>Assignments</h3>
+      <ul>
+        <li>
+          <a [routerLink]="['/assignments', 'data-cleaning']">Data Cleaning Assignment</a>
+          <button [routerLink]="['/tests', 'data-cleaning-test']" class="take-test-button">Take Test</button>
+        </li>
+        <li>
+          <a [routerLink]="['/assignments', 'eda-assignment']">Exploratory Data Analysis (EDA) Assignment</a>
+          <button [routerLink]="['/tests', 'eda-test']" class="take-test-button">Take Test</button>
+        </li>
+        <li>
+          <a [routerLink]="['/assignments', 'data-visualization']">Data Visualization Assignment</a>
+          <button [routerLink]="['/tests', 'data-visualization-test']" class="take-test-button">Take Test</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Tests Section -->
+    <div class="course-tests">
+      <h3>Tests</h3>
+      <ul>
+        <li>
+          <a [routerLink]="['/tests', 'midterm']">Midterm Test</a>
+          <button [routerLink]="['/tests', 'midterm']" class="take-test-button">Take Test</button>
+        </li>
+        <li>
+          <a [routerLink]="['/tests', 'final']">Final Test</a>
+          <button [routerLink]="['/tests', 'final']" class="take-test-button">Take Test</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Zoom Classes Section -->
+    <div class="zoom-classes">
+      <h3>Live Zoom Classes</h3>
+      <p>Join our live interactive Zoom classes for direct engagement with instructors and discussions on data management techniques.</p>
+      <ul>
+        <li><a href="https://zoom.us/j/1234567890" target="_blank">Zoom Class: Data Wrangling Techniques</a></li>
+        <li><a href="https://zoom.us/j/0987654321" target="_blank">Zoom Class: Exploratory Data Analysis</a></li>
+      </ul>
+    </div>
+
+</section>
